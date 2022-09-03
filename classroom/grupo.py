@@ -22,11 +22,11 @@ class Grupo:
     def listadoAsignaturas(self, **kwargs):
         if (self._asignaturas==None):
             p=[]
-            for x in kwargs.values():
+            for x in kwargs:
                 p.append(kwargs[x])
             self._asignaturas=p
         else:
-            for x in kwargs.values():
+            for x in kwargs:
                 self._asignaturas.append(kwargs[x])
 
     def agregarAlumno(self, alumno, lista=None):
